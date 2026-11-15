@@ -1,3 +1,5 @@
+from src.validators.cpf_validators.validator import validate_cpf
+
 data_registration = []
 
 
@@ -51,17 +53,25 @@ def registration() -> None:
         "registered_person": registered_person,
         "nick_name": nick_name,
     }
+
+    if not validate_cpf(registered_person):
+        print("Invalid CPF.")
+        return
+
+    # if validate nickname
+    # if validate email
+    # encript password
+
     for person in data:
         if person["registered_person"] == registered_person:
-            print("Exist!")
+            print("CPF already registered.")
             continue
 
         if person["email"] == email:
-
-            print("Email ja utilizado!")
+            print("CPF already registered.")
 
         if person["nick_name"] == nick_name:
-            print("nick name existente!")
+            print("nickname already registered.")
 
     if not is_duplicate:
         data_registration.append(new_person)
