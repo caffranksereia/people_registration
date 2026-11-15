@@ -1,35 +1,35 @@
 data_registration = []
 
 
-# def menu_registration() -> None:
-#     while True:
-#         print("\n===== PEOPLE REGISTRATION =====")
-#         print("1 - Register person")
-#         print("2 - List people")
-#         print("3 - Update person")
-#         print("4 - Delete person")
-#         print("0 - Exit")
+def menu_registration() -> None:
+    while True:
+        print("\n===== PEOPLE REGISTRATION =====")
+        print("1 - Register person")
+        print("2 - List people")
+        print("3 - Update person")
+        print("4 - Delete person")
+        print("0 - Exit")
 
-#         option = input("Choose an option: ")
+        option = input("Choose an option: ")
 
-#         if option == "1":
-#             registration()
+        if option == "1":
+            registration()
 
-#         elif option == "2":
-#             list_registration()
+        elif option == "2":
+            list_registration()
 
-#         elif option == "3":
-#             update_registration()
+        elif option == "3":
+            update_registration()
 
-#         elif option == "4":
-#             delete_registration()
+        elif option == "4":
+            delete_registration()
 
-#         elif option == "0":
-#             print("Exiting application...")
-#             break
+        elif option == "0":
+            print("Exiting application...")
+            break
 
-#         else:
-#             print("Invalid option!")
+        else:
+            print("Invalid option!")
 
 
 def registration() -> None:
