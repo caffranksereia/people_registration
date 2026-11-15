@@ -1,7 +1,38 @@
 data_registration = []
 
 
-def registration() -> list[dict[str, str]]:
+# def menu_registration() -> None:
+#     while True:
+#         print("\n===== PEOPLE REGISTRATION =====")
+#         print("1 - Register person")
+#         print("2 - List people")
+#         print("3 - Update person")
+#         print("4 - Delete person")
+#         print("0 - Exit")
+
+#         option = input("Choose an option: ")
+
+#         if option == "1":
+#             registration()
+
+#         elif option == "2":
+#             list_registration()
+
+#         elif option == "3":
+#             update_registration()
+
+#         elif option == "4":
+#             delete_registration()
+
+#         elif option == "0":
+#             print("Exiting application...")
+#             break
+
+#         else:
+#             print("Invalid option!")
+
+
+def registration() -> None:
 
     data = data_registration
 
@@ -11,7 +42,9 @@ def registration() -> list[dict[str, str]]:
     registered_person = input("CPF:")
     nick_name = input("nick name: ")
 
-    person = {
+    is_duplicate = False
+
+    new_person = {
         "name": name,
         "email": email,
         "password": password,
@@ -30,15 +63,18 @@ def registration() -> list[dict[str, str]]:
         if person["nick_name"] == nick_name:
             print("nick name existente!")
 
-    data_registration.append(person)
+    if not is_duplicate:
+        data_registration.append(new_person)
 
-    return data
 
-
-def list_registration(data: list) -> list:
-    data = data_registration
-
-    return data
+def list_registration() -> None:
+    for index, person in enumerate(data_registration):
+        print("-" * 30)
+        print("List Registration")
+        print(f"Index: {index}")
+        print(f"Name: {person['name']}")
+        print(f"Email: {person['email']}")
+        print("-" * 30)
 
 
 def update_registration() -> None:

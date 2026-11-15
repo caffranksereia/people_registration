@@ -1,5 +1,9 @@
-from register_person import registration
+from src.cli import process_registration
 
 
-def process_registration() -> None:
-    registration()
+def main() -> None:
+    process_registration()
+
+
+if __name__ == "__main__":
+    main()
