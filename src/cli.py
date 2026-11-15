@@ -1,5 +1,5 @@
-from src.register_person import registration
+from src.register_person import menu_registration
 
 
 def process_registration() -> None:
-    registration()
+    menu_registration()
