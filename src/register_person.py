@@ -78,8 +78,28 @@ def list_registration() -> None:
 
 
 def update_registration() -> None:
-    return None
+    update = int(input("What's registration update?  "))
+
+    for index, people in enumerate(data_registration):
+        if update == index:
+            update_email = input("email:")
+            update_nick_name = input("nick name:")
+
+            people[index]["email"] = update_email
+            people[index]["nick_name"] = update_nick_name
+
+            print("Registration updated!")
+            break
+        else:
+            print("Registration does not exist!")
 
 
 def delete_registration() -> None:
-    return None
+    delete = int(input("What's registration update?  "))
+    for index in range(len(data_registration)):
+        if delete == index:
+            data_registration.pop(index)
+            print("Registration delete!")
+            break
+    else:
+        print("Registration does not exist!")
